@@ -32,26 +32,26 @@ const modelData = [
 
 const sections = [
   {
-    label: "01 — Luxury Super SUV",
-    title: "Lamborghini\nUrus SE",
-    desc: "The ultimate expression of versatile luxury. A masterclass in automotive presence and uncompromising craftsmanship.",
-    tags: ["Elite Class", "Hybrid Tech", "Bespoke Interior"],
+    label: "01 — Italian Performance",
+    title: "Lamborghini\nHuracan Evo",
+    desc: "Open-air excitement with razor-sharp handling and the unmistakable Lamborghini sound. A cinematic experience on every drive.",
+    tags: ["Spyder", "V10 Power", "Elite Fleet"],
     color: "#050505",
     accent: "#C5A47E"
   },
   {
-    label: "02 — Refined Precision",
-    title: "BMW\nM4 Competition",
-    desc: "A surgical blend of elegance and athletic design. Every detail curated for an engaging, yet sophisticated journey.",
-    tags: ["Grand Tourer", "S58 Inline-6", "Isle of Man Green"],
+    label: "02 — American Supercar",
+    title: "Corvette\nC8 Stingray",
+    desc: "The mid-engine marvel that rewrote supercar history. Breathtaking acceleration meets a cockpit-focused digital experience.",
+    tags: ["Z51 Package", "6.2L V8", "Milwaukee Fleet"],
     color: "#050505",
     accent: "#C5A47E"
   },
   {
-    label: "03 — Pure Elegance",
-    title: "McLaren\n570S Coupe",
-    desc: "The art of grand touring. Lightweight carbon construction meets timeless design for the perfect coastal escape.",
-    tags: ["Carbon Monocell", "Signature Collection", "Starlight Black"],
+    label: "03 — Commanding Presence",
+    title: "Mercedes\nAMG G63",
+    desc: "Unmistakable presence paired with elite performance. The perfect choice for those who demand both power and prestige.",
+    tags: ["Biturbo V8", "Chicago Hub", "Stealth Black"],
     color: "#050505",
     accent: "#C5A47E"
   }

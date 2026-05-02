@@ -6,35 +6,26 @@ import { useState } from "react";
 
 const navLinks = [
   { name: "Home", href: "#home" },
-  { name: "Our Collection", type: "page" },
+  { name: "The Fleet", type: "page" },
   { name: "About Us", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Investors", href: "#" },
+  { name: "Guidelines", href: "#guidelines" },
 ];
 
 const faqItems = [
-  { q: "What are the requirements to book?", a: "You must be at least 21 years old (25 for certain elite models), have a valid driver's license, and provide proof of full coverage insurance." },
-  { q: "What if I don't have full coverage insurance?", a: "We offer various rental car damage protection options. Please contact our team for details on opting in." },
-  { q: "Do I still need personal car insurance if I opt in for protection?", a: "Rental damage protection is not a substitute for personal liability insurance. Requirements vary, so please confirm with your agent." },
-  { q: "Can I add an additional driver to my rental?", a: "Yes, additional drivers can be added for a fee, provided they meet all age and insurance requirements." },
-  { q: "What if my insurance deductible is over $2,500?", a: "We may require an additional security deposit or supplemental coverage in certain high-deductible cases." },
-  { q: "Do you have any extra hidden fees?", a: "Transparency is key. We detail all costs upfront, including delivery, fuel, and security deposits." },
-  { q: "Insurance requirements for business rentals?", a: "Business rentals require commercial insurance coverage or a verified corporate policy. Contact us for specifics." },
-  { q: "Do you offer delivery service?", a: "Yes! We offer delivery to Miami International Airport (MIA), Fort Lauderdale (FLL), and custom locations across the Miami area." },
-  { q: "How many miles are included with my rental?", a: "Standard rentals typically include 100-150 miles per day. Excess mileage fees apply thereafter." },
-  { q: "What is your security deposit policy?", a: "A refundable security deposit is required for all rentals. The amount varies based on the vehicle selected." },
-  { q: "What is your cancellation policy?", a: "Cancellations made 72+ hours in advance are eligible for a credit. Late cancellations may incur fees." },
-  { q: "Do you offer pick-up or drop-off outside of business hours?", a: "Yes, we offer flexible pick-up and drop-off options. Please coordinate with our team in advance for after-hours service." },
-  { q: "Do you offer roadside assistance?", a: "Every rental includes 24/7 roadside assistance for your peace of mind while exploring the Miami area." },
-  { q: "Less than 72 hour reservation?", a: "While we prefer advance booking, we can often accommodate last-minute requests. Check availability directly for same-day requests." },
-  { q: "Do you offer military discount?", a: "We are proud to support our service members. Please inquire about our military discount program when booking." },
+  { q: "What is your security deposit policy?", a: "A refundable security deposit of $1,000–$5,000 is required for all rentals. The amount is determined by rental duration and client history, and is fully refundable upon a clean return." },
+  { q: "What are your weekend rental requirements?", a: "All Friday, Saturday, and Sunday rentals require a minimum booking of 2 days to ensure a complete luxury experience without rushed turnarounds." },
+  { q: "What is your fuel policy?", a: "Vehicles should be returned at 100%. Fees apply for lower levels: 75% ($50), 50% ($75), 25% ($100), and below 25% ($125)." },
+  { q: "What are the cleanliness standards?", a: "Vehicles must be returned in the same condition as delivered. Light soiling entails a $75+ fee, while heavy detailing starts at $200+." },
+  { q: "What activities are prohibited?", a: "Absolutely no smoking ($350 fee). Unauthorized drivers result in full deposit forfeiture. Traffic violations are the client's responsibility." },
+  { q: "Where do you deliver?", a: "We offer white-glove vehicle delivery and pickup within our service corridor stretching from Upper Milwaukee to Chicago." },
 ];
 
 const specs = [
-  { val: "$715", label: "Starting / Day" },
-  { val: "Elite", label: "Collection" },
-  { val: "MIAMI", label: "Coverage" },
-  { val: "24/7", label: "Support" },
+  { val: "100mi", label: "Service Radius" },
+  { val: "24/7", label: "Client Support" },
+  { val: "100%", label: "Satisfaction" },
+  { val: "19", label: "Elite Fleet" },
 ];
 
 export default function App() {
@@ -57,12 +48,10 @@ export default function App() {
       {/* Floating HUD Navigation */}
       <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-100 flex items-center gap-2 px-2 py-2 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full pointer-events-auto">
         <div className="flex items-center gap-3 px-6 py-2 border-r border-white/10">
-          <img 
-            src="/Screenshot 2026-04-24 at 3.42.13 PM.png" 
-            alt="Private Keys" 
-            className="h-6 w-auto"
-          />
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white hidden md:block">Private Keys</span>
+          <div className="flex items-center justify-center w-8 h-8 bg-accent rounded-sm">
+            <span className="text-black font-black text-xs">AX</span>
+          </div>
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white hidden md:block">APX Luxury</span>
         </div>
         <div className="flex items-center gap-1 md:gap-4 px-2">
           {navLinks.map((link, i) => (
@@ -107,8 +96,8 @@ export default function App() {
                 <span className="text-[10px] font-black uppercase tracking-[0.8em] text-accent">Distinction Ready</span>
               </div>
               <h1 className="text-7xl md:text-9xl lg:text-[140px] font-serif font-bold leading-[0.8] uppercase tracking-[-0.06em] mb-12">
-                Absolute <br/> 
-                <span className="text-outline">Distinction.</span>
+                Standard <br/> 
+                <span className="text-outline">Beyond.</span>
               </h1>
               <div className="grid grid-cols-2 gap-12 max-w-md border-t border-white/10 pt-12">
                 <div>
@@ -117,7 +106,7 @@ export default function App() {
                 </div>
                 <div>
                   <p className="text-[9px] uppercase tracking-widest text-white/30 mb-2">Service Hubs</p>
-                  <p className="text-sm font-medium leading-relaxed">Miami / Tampa / Orlando / NY.</p>
+                  <p className="text-sm font-medium leading-relaxed">Milwaukee / Chicago.</p>
                 </div>
               </div>
             </motion.div>
@@ -147,8 +136,8 @@ export default function App() {
               <div className="absolute bottom-8 left-8 right-8">
                 <div className="flex justify-between items-end">
                   <div>
-                    <p className="text-4xl font-bold mb-1 tracking-tighter">PRIVATE KEYS</p>
-                    <p className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold">Unrivaled Selection</p>
+                    <p className="text-4xl font-bold mb-1 tracking-tighter uppercase">APX LUXURY</p>
+                    <p className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold">Precision Meets Power</p>
                   </div>
                   <MousePointer2 className="text-white/20 -rotate-12" size={32} />
                 </div>
@@ -271,24 +260,24 @@ export default function App() {
                 <div className="w-20 h-[1px] bg-accent" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.8em] text-accent">Core Protocol</span>
               </div>
-              <h2 className="text-7xl md:text-9xl font-serif font-bold tracking-tighter uppercase leading-[0.85] mb-12">Total <br/> <span className="text-outline">Excellence.</span></h2>
+              <h2 className="text-7xl md:text-9xl font-serif font-bold tracking-tighter uppercase leading-[0.85] mb-12">Pure <br/> <span className="text-outline">Experience.</span></h2>
               <div className="space-y-8 text-white/50 text-xl leading-relaxed font-light font-mono">
                 <p>
-                  &gt; PRIVATE KEYS IS MORE THAN RENTALS.<br/>
-                  &gt; WE ARE THE PREMIER OPERATORS OF MIAMI, TAMPA, ORLANDO & NY.
+                  &gt; APX LUXURY IS NOT A RENTAL COMPANY.<br/>
+                  &gt; IT IS AN EXPERIENCE CURATED FOR THOSE WHO DEMAND THE EXTRAORDINARY.
                 </p>
                 <p className="text-base text-white/30 uppercase tracking-widest leading-loose">
-                  Our fleet is a curated selection of automotive perfection. We provide the entry to the most exclusive destinations, maintained to obsessive standards of excellence and delivered with absolute discretion.
+                  From Milwaukee's finest districts to the heart of Chicago, we deliver the most prestigious exotic vehicles with absolute discretion. Every reservation is handled with the precision of a private concierge.
                 </p>
               </div>
               <div className="mt-16 grid grid-cols-2 gap-12 border-t border-white/5 pt-16">
                 <div>
-                  <p className="text-5xl font-bold mb-2">04</p>
-                  <p className="text-[9px] uppercase tracking-[0.4em] text-accent font-bold">Primary Hubs</p>
+                  <p className="text-5xl font-bold mb-2">19</p>
+                  <p className="text-[9px] uppercase tracking-[0.4em] text-accent font-bold">Vehicles Available</p>
                 </div>
                 <div>
                   <p className="text-5xl font-bold mb-2">100%</p>
-                  <p className="text-[9px] uppercase tracking-[0.4em] text-accent font-bold">Execution</p>
+                  <p className="text-[9px] uppercase tracking-[0.4em] text-accent font-bold">Satisfaction</p>
                 </div>
               </div>
             </div>
@@ -313,20 +302,18 @@ export default function App() {
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mb-32">
           <div className="col-span-1 lg:col-span-1">
             <div className="flex items-center gap-4 mb-12">
-              <img 
-                src="/Screenshot 2026-04-24 at 3.42.13 PM.png" 
-                alt="Private Keys" 
-                className="h-10 w-auto"
-              />
+              <div className="flex items-center justify-center w-10 h-10 bg-accent rounded-sm">
+                <span className="text-black font-black text-lg">AX</span>
+              </div>
               <div>
-                <span className="text-xl font-bold tracking-tighter text-white uppercase leading-none block">Private Keys</span>
-                <span className="text-[10px] tracking-[0.4em] text-accent font-bold uppercase mt-1">Premier Registry</span>
+                <span className="text-xl font-bold tracking-tighter text-white uppercase leading-none block">APX Luxury</span>
+                <span className="text-[10px] tracking-[0.4em] text-accent font-bold uppercase mt-1">Elite Exotic Rentals</span>
               </div>
             </div>
             <div className="flex flex-col gap-4 text-[9px] font-mono uppercase tracking-[0.2em] text-white/30">
-              <p>REGION: MIAMI_TERRITORY</p>
-              <p>STATUS: UNWAVERING_SERVICE</p>
-              <p>ESTABLISHED: MMXXIV</p>
+              <p>REGION: MILWAUKEE_CHICAGO</p>
+              <p>STATUS: BEYOND_LUXURY</p>
+              <p>CONTACT: APXLUXURY1@GMAIL.COM</p>
             </div>
           </div>
 
@@ -340,11 +327,12 @@ export default function App() {
           </div>
 
           <div>
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.6em] mb-12 text-accent">Contact Protocol</h4>
-            <div className="flex flex-col gap-8 text-[11px] font-bold uppercase tracking-[0.3em] text-white/30">
-              <p>Direct: FL_NY_TERRITORIES</p>
-              <p>Secure: ENCRYPTED_INBOX</p>
-              <p>Global: HUB_LOGISTICS</p>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.6em] mb-12 text-accent">Connect Protocol</h4>
+            <div className="flex flex-col gap-8 text-[11px] font-bold uppercase tracking-[0.3em] text-white/50">
+              <a href="#" className="hover:text-accent transition-colors w-fit">Instagram @apxluxury</a>
+              <a href="#" className="hover:text-accent transition-colors w-fit">TikTok @apxluxury</a>
+              <a href="#" className="hover:text-accent transition-colors w-fit">Google Reviews</a>
+              <p className="text-white/30">(224) 702-3941</p>
             </div>
           </div>
 
@@ -358,7 +346,7 @@ export default function App() {
         </div>
 
         <div className="max-w-[1400px] mx-auto border-t border-white/5 pt-10 flex justify-between items-center">
-          <p className="text-[9px] font-mono tracking-[0.4em] text-white/10 uppercase">© 2026 PRIVATE_KEYS_OPERATIONS // ALL_RIGHTS_RESERVED.</p>
+          <p className="text-[9px] font-mono tracking-[0.4em] text-white/10 uppercase">© 2026 APX_LUXURY_OPERATIONS // ALL_RIGHTS_RESERVED.</p>
           <div className="hidden md:flex gap-10">
             {["Terms", "Privacy", "System"].map(link => (
               <a key={link} href="#" className="text-[9px] font-mono tracking-[0.4em] text-white/10 hover:text-accent transition-colors uppercase">{link}</a>
